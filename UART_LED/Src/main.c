@@ -105,15 +105,11 @@ int main(void)
   while (1)
   {
 	  
-//		char comp1[5] = "LEDOn";	// template LEDOn
-//		char comp2[5] = "LEDBl";	// template LEDBl
-//		char comp3[5] = "LEDOf";	// template LEDOf
-		uint8_t comp1[5] = "LEDOn";
-		uint8_t comp2[5] = "LEDBl";	// template LEDBl
-		uint8_t comp3[5] = "LEDOf";
+		uint8_t comp1[5] = "LEDOn";	// template LED on
+		uint8_t comp2[5] = "LEDBl";	// template LED blinkig
+		uint8_t comp3[5] = "LEDOf"; // template LED off
 		int flag = 0;
 
-		
 //////////////////////////////////////////////////////////////////////////
 //			//comparation ver 1.0
 			
@@ -137,17 +133,15 @@ int main(void)
 //				HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 1);  // Led_off
 //				}
 ////////////////////////////////////////////////////////////////////////////
-
-				
 			
 			if (gotAll){
 				flag = 0;
 	//		strcmp(buf_uplevel, comp1);
 	//		if ( commandNumber( comp1) == 1)
 				if( (comp1[3] == buf_uplevel[3]) && (comp1[4] == buf_uplevel[4]))
-				flag = 1;
-			else if(  (comp2[3] == buf_uplevel[3]) && (comp2[4] == buf_uplevel[4]))
-				flag = 2;
+					flag = 1;
+				else if(  (comp2[3] == buf_uplevel[3]) && (comp2[4] == buf_uplevel[4]))
+					flag = 2;
 
 				switch (flag)
 				{

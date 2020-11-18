@@ -231,36 +231,13 @@ int bufL = 6;
 void USART1_IRQHandler(void)
 {
   /* USER CODE BEGIN USART1_IRQn 0 */
- 	
-		//static uint8_t counter;
-	
+ 		
 	if (USART1->SR&USART_SR_RXNE) // if data received
 	{
 		buf_uplevel[counter] = USART1->DR;
 
-				
-//		if (waiting_next_symbol  > rem_waiting_next_symbol +100)
-//		{
-//			counter = 0;
-//		}
 		rem_waiting_next_symbol = waiting_next_symbol;
 		
-		
-//		if (buf_uplevel[counter] == 0)
-//		{
-//			if (counter >= 10) {
-//				//uart_uplevel_ready = 1;		
-//			counter = 0;
-//			
-//			}
-//		return ;
-//		}
-//		if (counter < 11)
-//			counter++; // BUF_SIZE_UPLEVEL
-//		else {				
-//			counter = 0;
-//			counterAll ++;
-//		}
 		if (buf_uplevel[counter] != 0) {
 		//	notFirstIter = 1;
 			if(counter < bufL){

@@ -463,11 +463,11 @@ ARM Macro Assembler    Page 8
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=test1\startup_stm32f103xb.d -otest1\startup_stm32f103xb.o -I.\RTE\
-_test1 -IC:\Users\Administrator\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\C
-ore\Include -IC:\Users\Administrator\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP
-\2.3.0\Device\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VE
-RSION SETA 531" --predefine="_RTE_ SETA 1" --predefine="STM32F10X_MD SETA 1" --
-predefine="_RTE_ SETA 1" --list=startup_stm32f103xb.lst startup_stm32f103xb.s
+_test1 -IC:\Users\User\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Inclu
+de -IC:\Users\User\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Incl
+ude --predefine="__EVAL SETA 1" --predefine="__MICROLIB SETA 1" --predefine="__
+UVISION_VERSION SETA 527" --predefine="_RTE_ SETA 1" --predefine="STM32F10X_MD 
+SETA 1" --list=startup_stm32f103xb.lst startup_stm32f103xb.s
 
 
 
@@ -1174,4 +1174,4 @@ Symbol: __main
       At line 135 in file startup_stm32f103xb.s
 Comment: __main used once
 2 symbols
-406 symbols in table
+407 symbols in table
